@@ -1,3 +1,4 @@
+package p1_estrutura_sequencial;
 
 public class Main {
 
