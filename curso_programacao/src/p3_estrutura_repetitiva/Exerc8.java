@@ -7,36 +7,22 @@ public class Exerc8 {
 
 	public static void main(String[] args) {
 		/*
-		 * Ler um valor N. Calcular e escrever seu respectivo fatorial. Fatorial de N =
-		 * N * (N-1) * (N-2) * (N-3) * ... * 1. Lembrando que, por definição, fatorial
-		 * de 0 é 1.
+		 * Ler um número inteiro N e calcular todos os seus divisores.
+		 * 
 		 */
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		int num_escolhido = sc.nextInt();
-		int result = 0;
-		int cont = 0;
+		int num = sc.nextInt();
 
-		if (num_escolhido == 0 || num_escolhido == 1 ) {
-			result = 1;
-		} else {
-
-			for (int i = 1; i < num_escolhido; i++) {
-
-				cont += 1;
-
-				if (cont == 1) {
-					result = num_escolhido * (num_escolhido - i);
-				} else {
-					result = result * (num_escolhido - i);
-				}
-
+		for (int i = 1; i <= num; i++) {
+			if (num % i == 0) {
+				System.out.println(i);
 			}
+
 		}
 
-		System.out.println(result);
 		sc.close();
 	}
 
